@@ -1,0 +1,74 @@
+classed based
+--------------------------
+class A{
+    x=20
+    y=30
+    constructor(){
+        console.log(this.x,this.y)
+
+    }
+}
+class B extends A{
+    z=56
+    constructor(u){
+        super()
+        console.log(this.x,this.y,u,this.z);
+    }
+}
+const www=new A()
+const qqq=new B()
+----------------------------------------------------------
+import React from 'react'
+export default class app extends React.Component{
+    state={
+       counter:0
+    }
+    handleclick=()=>{
+        this.setState({counter:this.state.counter+1})
+    }
+    hleclick=()=>{
+        this.setState({Counter:this.state.counter--})
+    }
+    haclick=()=>{
+        this.setState({Counter:this.state.counter=0})
+    }
+    render(){
+        console.log(this.state);
+        return(
+        <div id='aa' className='text-3xl rounded-2xl text-white h-[40vh] w-[50vw] mx-auto text-center mt-[20vh]'>
+            <h1 className='font-semibold pt-[3vh] font-mono text-4xl'>My counter</h1>
+            <h1 className='ml-[20vw] mt-5 border border-orange-400 rounded-2xl  text-5xl  h-[10vh] w-[10vw]'>{this.state.counter}</h1>
+            <button onClick={this.handleclick}>+</button>
+            <button onClick={this.hleclick}>-</button>
+            <button onClick={this.haclick}>Reset</button>
+        </div>
+    )}
+}
+------------------------------------------------------------------
+import React from 'react'
+export default class app extends React.Component{
+    state={
+       counter:0
+    }
+    handleclick=()=>{
+        this.setState({counter:this.state.counter+1})
+    }
+    hleclick=()=>{
+        this.setState({Counter:this.state.counter--})
+    }
+    haclick=()=>{
+        this.setState({Counter:this.state.counter=0})
+    }
+    render(){
+        console.log(this.state);
+        return(
+        <div id='aa' className='text-3xl rounded-2xl text-white h-[40vh] w-[50vw] mx-auto text-center mt-[20vh]'>
+            <h1 className='font-semibold pt-[3vh] font-mono text-4xl'>My counter</h1>
+            <h1 className='ml-[20vw] mt-5 border border-orange-400 rounded-2xl  text-5xl  h-[10vh] w-[10vw]'>{this.state.counter}</h1>
+            <button onClick={this.handleclick}>+</button>
+            <button onClick={this.hleclick}>-</button>
+            <button onClick={this.haclick}>Reset</button>
+        </div>
+    )}
+}
+---------------------------------------------------------------
